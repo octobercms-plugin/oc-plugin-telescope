@@ -1,0 +1,4 @@
+1.0.1: First version of telescope
+1.0.2:
+    - create_table
+    - 2018_08_08_100000_create_telescope_entries_table.php
