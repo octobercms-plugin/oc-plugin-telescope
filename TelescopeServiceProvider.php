@@ -26,10 +26,6 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
                 return true;
             }
 
-            $user = BackendAuth::getUser();
-            if (in_array(optional($user)->email, explode(',', env('DEVELOPER_MAILS')))) {
-                return true;
-            }
 
             return $entry->isReportableException() ||
                 $entry->isFailedRequest() ||
