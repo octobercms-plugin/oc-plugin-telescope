@@ -25,7 +25,9 @@ class TelescopeServiceProvider extends TelescopeApplicationServiceProvider
             if ($this->app->environment('local')) {
                 return true;
             }
-
+	    if(env('ENABLE_PRODUCT')){
+		return true;		
+	    }
 
             return $entry->isReportableException() ||
                 $entry->isFailedRequest() ||
